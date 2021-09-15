@@ -26,7 +26,10 @@
       }
 
       const MINUTES_PER_HOUR = 60;
-      const newText = `${estimateCount} Minutes (${estimateCount / MINUTES_PER_HOUR} hours)`; // It's not pretty, but alas...
+      let hoursText = estimateCount / MINUTES_PER_HOUR + " hours";
+      // It's not pretty, but alas...
+      if (estimateCount === MINUTES_PER_HOUR) hoursText = "1 hour";
+      const newText = `${estimateCount} min (${hoursText})`;
       const currentText = estimateElement.innerHTML;
       if (newText !== currentText) {
         estimateElement.innerHTML = newText;
