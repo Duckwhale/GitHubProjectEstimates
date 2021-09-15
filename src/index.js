@@ -9,7 +9,6 @@
       const labels = [...column.querySelectorAll(QUERY_SELECTOR)];
 
       const estimateCount = labels.map(l => +(!l.closest(".issue-card.d-none") ? l.getAttribute(CARD_LABEL_ATTR).match(/\d+/)[0] : 0)).reduce((sum, w) => sum + w, 0);
-      console.log(estimateCount);
       let estimateElement = title.querySelector(`.${ESTIMATE_TITLE_CLASS}`);
 
       if (estimateCount === 0) {
