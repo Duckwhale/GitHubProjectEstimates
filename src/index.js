@@ -8,7 +8,7 @@
       const QUERY_SELECTOR = `button[${CARD_LABEL_ATTR}*="Estimate:"]`;
       const labels = [...column.querySelectorAll(QUERY_SELECTOR)];
 
-      const estimateCount = labels.map(l => +(!l.closest(".issue-card.d-none") ? l.getAttribute(CARD_LABEL_ATTR).match(/\d+/)[0] : 0)).reduce((sum, w) => sum + w, 0);
+      const estimateCount = labels.map(l => +(!l.closest(".issue-card.d-none") ? l.getAttribute(CARD_LABEL_ATTR).match(/\d+(\.\d+)?/)[0] : 0)).reduce((sum, w) => sum + w, 0);
       let estimateElement = title.querySelector(`.${ESTIMATE_TITLE_CLASS}`);
 
       if (estimateCount === 0) {
@@ -26,7 +26,7 @@
       }
 
       const MINUTES_PER_HOUR = 60;
-      let hoursText = estimateCount / MINUTES_PER_HOUR + " hours";
+      let hoursText = Number((estimateCount / MINUTES_PER_HOUR).toFixed(2)) + " hours";
       // It's not pretty, but alas...
       if (estimateCount === MINUTES_PER_HOUR) hoursText = "1 hour";
       const newText = `${estimateCount} min (${hoursText})`;

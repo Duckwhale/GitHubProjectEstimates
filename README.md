@@ -22,6 +22,7 @@ What changed? Not a lot:
 * The estimated completion time will be displayed at the top of each column in the following format: "X minutes (X/60 Hours)"
 * I updated the name and description of the extension to make it easier to understand and differ from the original in the extensions panel
 * Removed the spammy console output (though the ``setInterval`` I didn't bother to remove, even if it annoys me greatly)
+* Add experimental support for fractions (this might break in some edge cases, though I haven't encountered any)
 
 This is how it currently looks for me:
 
