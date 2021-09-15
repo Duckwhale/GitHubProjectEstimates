@@ -32,16 +32,6 @@
     }
   }
 
-  function createDotStyles() {
-    const dotStyles = [...new Array(300)].map((_, weight) =>
-      `button[${CARD_LABEL_ATTR}^="label:e/${weight}"]::after {content: '${weight}';}`
-    );
-    const style = document.createElement('style');
-    style.innerHTML = dotStyles.join('\n');
-    document.body.appendChild(style);
-  }
-
-  createDotStyles();
   updateColumn();
   setInterval(updateColumn, 200);
 })();
