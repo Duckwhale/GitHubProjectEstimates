@@ -43,3 +43,14 @@ Instead of the arbitrary amounts of time given in the example above, I recommend
 ## Contributing
 
 If you want to add onto this or find a problem, feel free to open an issue. I can't promise I'll have time to do much, but at least I'll generally respond to queries (unlike the original author) :P
+
+## Using it on Firefox
+
+I've managed to make it load the extension by doing the following:
+
+1. Open ``about:debugging``
+2. Go to ``This Firefox``
+3. Click ``Load Temporary Add-on``
+4. Select the ``manifest.json`` file
+
+Unfortunately I was unable to load it permanently via the regular addons menu, as Firefox claims the file is corrupted. No idea what's wrong with it, but I didn't want to spend any more time on it.
