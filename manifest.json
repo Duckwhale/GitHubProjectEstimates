@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Issues Hub",
   "version": "0.1.3",
-  "description": "Add Github issues estimate capabilities",
+  "name": "GitHub Project Estimates",
+  "description": "Adds estimated completion times to the Projects view of GitHub issues",
   "icons": {
     "16": "assets/icon16.png",
     "32": "assets/icon32.png",
