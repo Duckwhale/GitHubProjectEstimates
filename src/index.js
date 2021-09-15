@@ -25,7 +25,8 @@
         estimateElement = title.appendChild(estimateElement);
       }
 
-      const newText = `${estimateCount}`;
+      const MINUTES_PER_HOUR = 60;
+      const newText = `${estimateCount} Minutes (${estimateCount / MINUTES_PER_HOUR} hours)`; // It's not pretty, but alas...
       const currentText = estimateElement.innerHTML;
       if (newText !== currentText) {
         estimateElement.innerHTML = newText;
